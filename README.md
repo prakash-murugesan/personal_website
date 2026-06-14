@@ -1,6 +1,6 @@
 # Prakash Murugesan · Personal Website
 
-Static portfolio site for Prakash Murugesan, focused on multimodal AI research engineering work.
+Static portfolio site for Prakash Murugesan, focused on multimodal research engineering work.
 
 ## Getting started
 
@@ -18,6 +18,18 @@ python3 -m http.server 8000
 
 The site is fully static, so no build step is required.
 
-## Preview
+## Preview in Codex
 
-![Current preview](browser:/invocations/gidesyba/artifacts/artifacts/portfolio.png)
+If you see **"Not Found"** for a previously shared preview image, that usually means the old `browser:/...` artifact link expired.
+
+To get a fresh preview in this Codex session:
+
+```bash
+python3 -m http.server 8000
+```
+
+Then request a new screenshot render in-chat.
+
+## Preview in GitHub
+
+`browser:/...` links are session-local and do not render on GitHub. Use local serving (`python3 -m http.server 8000`) or deploy to GitHub Pages for a persistent URL.
