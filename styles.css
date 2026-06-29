@@ -90,6 +90,10 @@ nav a:hover {
   margin: 0.1rem 0 0.6rem;
 }
 
+.intro__body p + p {
+  margin-top: 0.85rem;
+}
+
 .kicker {
   text-transform: uppercase;
   letter-spacing: 0.14em;
@@ -160,6 +164,66 @@ nav a:hover {
   margin-top: 2rem;
 }
 
+/* Products section with demo preview */
+#products .list li {
+  display: grid;
+  grid-template-columns: 70px 1fr 100px;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.product-preview {
+  width: 100px;
+  min-width: 100px;
+  max-width: 100px;
+  height: 115px;
+  min-height: 115px;
+  max-height: 115px;
+  border-radius: 6px;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  background: var(--line);
+  text-decoration: none;
+}
+
+.product-preview img {
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 34%;
+  display: block;
+}
+
+.product-preview::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(17, 17, 18, 0.16);
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+.product-preview__play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border-top: 9px solid transparent;
+  border-bottom: 9px solid transparent;
+  border-left: 14px solid #fff;
+  filter: drop-shadow(0 1px 4px rgba(17, 17, 18, 0.45));
+  transform: translate(-35%, -50%);
+  z-index: 1;
+}
+
+.product-preview:hover::after {
+  opacity: 1;
+}
+
 /* Writing section with preview images */
 #writing .list li {
   display: grid;
@@ -219,6 +283,15 @@ nav a:hover {
 
   .list li {
     grid-template-columns: 60px 1fr;
+  }
+
+  #products .list li {
+    grid-template-columns: 60px 1fr;
+    gap: 1rem;
+  }
+
+  .product-preview {
+    display: none;
   }
 
   /* Writing section mobile layout */
