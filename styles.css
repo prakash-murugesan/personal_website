@@ -66,22 +66,28 @@ nav a:hover {
 
 .intro {
   display: grid;
-  grid-template-columns: 120px 1fr;
+  grid-template-columns: 140px 1fr;
   gap: 1.5rem;
   align-items: center;
   margin-bottom: 3rem;
 }
 
 .avatar {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   border-radius: 999px;
-  background: linear-gradient(135deg, #0f4db8, #6fb1ff);
-  color: #fff;
-  display: grid;
-  place-items: center;
-  font-weight: 700;
-  letter-spacing: 0.08em;
+  border: 1px solid var(--line);
+  overflow: hidden;
+  justify-self: center;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: translateY(-8%) scale(1.18);
+  transform-origin: center;
 }
 
 .intro__body h1 {
