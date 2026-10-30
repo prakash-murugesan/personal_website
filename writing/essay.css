@@ -1,0 +1,126 @@
+.essay-shell {
+  padding-top: 1.25rem;
+}
+
+.essay {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.essay-back {
+  color: var(--muted);
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.essay-header .essay-back {
+  display: inline-block;
+  margin-bottom: 2.5rem;
+}
+
+.essay-header h1 {
+  font-family: 'Fraunces', 'Times New Roman', serif;
+  font-size: clamp(2.3rem, 6vw, 3.5rem);
+  line-height: 1.15;
+  margin: 0.6rem 0 1rem;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+
+.essay-header > .meta {
+  font-size: 0.9rem;
+}
+
+.essay-contents {
+  margin: 2rem 0 2.75rem;
+  padding: 0.9rem 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.essay-contents summary {
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.essay-contents ol {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  list-style: none;
+  gap: 0.5rem 1.5rem;
+  padding: 1rem 0 0.25rem;
+}
+
+.essay-contents a {
+  text-decoration: none;
+}
+
+.essay-body {
+  font-size: 1.08rem;
+  line-height: 1.85;
+  overflow-wrap: break-word;
+}
+
+.essay-body p {
+  margin-bottom: 1.15rem;
+}
+
+.essay-body h2 {
+  font-family: 'Fraunces', 'Times New Roman', serif;
+  font-size: 1.8rem;
+  line-height: 1.3;
+  margin: 3.25rem 0 1.25rem;
+  scroll-margin-top: 1.5rem;
+}
+
+.essay-end {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  border-top: 1px solid var(--line);
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+}
+
+.skip-link {
+  position: absolute;
+  top: 0.5rem;
+  left: 1.5rem;
+  padding: 0.5rem 1rem;
+  color: var(--text);
+  background: var(--bg);
+  transform: translateY(-200%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+a:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+@media (max-width: 640px) {
+  .essay-shell {
+    padding-top: 0;
+  }
+
+  .essay-header .essay-back {
+    margin-bottom: 1.75rem;
+  }
+
+  .essay-body {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  .essay-body h2 {
+    margin-top: 2.5rem;
+    font-size: 1.6rem;
+  }
+}
